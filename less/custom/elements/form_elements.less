@@ -1,0 +1,39 @@
+.form-control {
+  &-textfield {
+    &-width {
+      width: @textfield-width;
+    }
+  }
+}
+
+// format date select combo
+.form-type-date-combo.form-group{
+  .form-item {
+    label {
+      display: none;
+    }
+    > div {
+      margin-right: 13px;
+    }
+  }
+  .date-form-element-content {
+    padding-left: 0;
+  }
+}
+
+// Require field asterisc.
+.control-label {
+  .form-required{
+    color: red;
+  }
+}
+
+// Basic apparence inline filed radios
+.inline-radios-field {
+  > div {
+    display: inline-block;
+    label {
+      padding-right: 10px;
+    }
+  }
+}

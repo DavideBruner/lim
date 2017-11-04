@@ -1,0 +1,1 @@
+remove this file and replace it with files 'svg - eot ttf woff woff2'

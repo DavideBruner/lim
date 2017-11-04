@@ -1,0 +1,22 @@
+/**
+ * @font-face LESS Mixin
+ * use: .font-face(
+ *   @font-family, // name
+ *   @file-path,   // absolute/relative URL to font files
+ *   @font-name,   // font file name (es. Lato-Black)
+ *   @font-weight, // light/normal/bold/inherit | 300/400/700
+ *   @font-style   // italic/normal/inherit
+ * )
+ */
+// @FontFace
+
+.font-face(@font-family-roboto-medium, '@{roboto_path}/medium/', "Roboto-Medium", "medium", "normal");
+.font-face(@font-family-roboto-medium-italic,  '@{roboto_path}/medium/', "Roboto-MediumItalic", "medium", "italic");
+
+.font-face(@font-family-roboto-regular, '@{roboto_path}/regular/', "Roboto-Regular", "normal", "normal");
+.font-face(@font-family-roboto-regular,  '@{roboto_path}/regular/', "Roboto-Regular", "normal", "italic");
+
+.font-face(@font-family-roboto-bold, '@{roboto_path}/bold/', "Roboto-Bold", "bold", "normal");
+
+.font-face(@font-family-roboto-thin, '@{roboto_path}/thin/', "Roboto-Thin", "normal", "normal");
+.font-face(@font-family-roboto-thin-italic, '@{roboto_path}/thin/', "Roboto-ThinItalic", "normal", "italic");

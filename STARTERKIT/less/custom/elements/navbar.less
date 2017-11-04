@@ -1,0 +1,32 @@
+.navbar-nav {
+
+  @media (min-width: @grid-float-breakpoint) {
+    text-align: center;
+    float: none;
+    > li {
+      float: none;
+      display: inline-block;
+    }
+  }
+
+  li a {}
+}
+
+.navbar-collapse {
+  li a {
+    .underline_color(@navbar-default-link-color);
+    text-transform: uppercase;
+    color: @navbar-default-link-color;
+    font-size: @font-size-large;
+  }
+}
+
+.navbar-btn {
+  display: inline-block;
+  margin: 20px;
+}
+
+.navbar.container {
+  margin-top: 0;
+  border-bottom: 1px solid @gray-light;
+}

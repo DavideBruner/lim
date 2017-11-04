@@ -1,0 +1,7 @@
+@import "mixins/commons.less";
+@import "mixins/font_face.less";
+
+/* Conditional file import */
+.conditional_include(@libary, @condition) when(@condition = 1) {
+  @import "@{libary}";
+}

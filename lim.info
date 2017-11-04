@@ -1,0 +1,74 @@
+name = Level 27
+description = Based on bootstrap and materialize
+core = 7.x
+version = "7.x-1.0"
+base theme = bootstrap
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+regions[navigation]     = 'Navigation'
+regions[header]         = 'Top Bar'
+regions[highlighted]    = 'Highlighted'
+regions[help]           = 'Help'
+regions[pre-content]    = 'Pre Content'
+regions[content]        = 'Content'
+regions[post-content]   = 'Post Content'
+regions[sidebar_first]  = 'Primary'
+regions[sidebar_second] = 'Secondary'
+regions[footer]         = 'Footer'
+regions[page_top]       = 'Page top'
+regions[page_bottom]    = 'Page bottom'
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Stylesheets
+;;;;;;;;;;;;;;;;;;;;;
+stylesheets[all][] = less/style.less
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Scripts
+;;;;;;;;;;;;;;;;;;;;;
+exclude[js][] = sites/all/themes/bootstrap/js/bootstrap.js
+
+scripts[] = 'includes/vendors/materialize/js/global.js'
+scripts[] = 'includes/vendors/materialize/js/animation.js'
+scripts[] = 'includes/vendors/materialize/js/transitions.js'
+scripts[] = 'includes/vendors/materialize/js/buttons.js'
+scripts[] = 'includes/vendors/materialize/js/forms.js'
+scripts[] = 'includes/vendors/materialize/js/transitions.js'
+scripts[] = 'includes/vendors/materialize/js/waves.js'
+scripts[] = 'includes/vendors/materialize/js/date_picker/picker.js'
+scripts[] = 'includes/vendors/materialize/js/date_picker/picker.date.js'
+
+
+;scripts[] = 'includes/vendors/bootstrap/js/affix.js'
+scripts[] = 'includes/vendors/bootstrap/js/alert.js'
+;scripts[] = 'includes/vendors/bootstrap/js/button.js'
+;scripts[] = 'includes/vendors/bootstrap/js/carousel.js'
+scripts[] = 'includes/vendors/bootstrap/js/collapse.js'
+;scripts[] = 'includes/vendors/bootstrap/js/dropdown.js'
+scripts[] = 'includes/vendors/bootstrap/js/modal.js'
+;scripts[] = 'includes/vendors/bootstrap/js/tooltip.js'
+;scripts[] = 'includes/vendors/bootstrap/js/popover.js'
+;scripts[] = 'includes/vendors/bootstrap/js/scrollspy.js'
+scripts[] = 'includes/vendors/bootstrap/js/tab.js'
+;scripts[] = 'includes/vendors/bootstrap/js/transition.js'
+
+; Custom Scripts
+scripts[] = 'js/theme.js'
+
+; Disable the CDN provider so compiled source files can be used.
+settings[bootstrap_cdn] = ''
+
+settings[materialize_active] = 1
+settings[materialize_less] = 1
+settings[textfield_width] = '320px'
+
+; Variables defined here will automatically be available inside sheets
+; registered to this module.
+; Variables are lazy evaluated, so they don't have to be defined in order.
+less[vars][@materialize-enabled]   = 1
+less[vars][@sticky-footer] = 1
+
+vendors[materialize][inc] = 'sites/all/themes/lim/includes/vendors/materialize/materialize.inc'
+vendors[bootstrap_v][inc] = 'sites/all/themes/lim/includes/vendors/bootstrap/bootstrap.inc'

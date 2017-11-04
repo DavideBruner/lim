@@ -1,0 +1,24 @@
+// Remove Focus Boxes
+select:focus {
+  outline: @select-focus;
+}
+
+button:focus {
+  outline: none;
+  background-color: @button-background-focus;
+}
+
+label {
+  font-size: @label-font-size;
+  color: @input-border-color;
+}
+
+//@fixme : le floating labels non funzionano come dovrebbero
+//.conditional_include('/../vendor/materialize/less/forms/components/input-fields', @materialize-floating-label);
+
+@import "components/radio-buttons";
+@import "components/checkboxes";
+@import "components/switches";
+@import "components/select";
+@import "components/file-input";
+@import "components/range";

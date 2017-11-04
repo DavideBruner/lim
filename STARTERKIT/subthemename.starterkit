@@ -1,0 +1,74 @@
+name = Level 27
+description = Based on bootstrap and materialize
+core = 7.x
+version = "7.x-1.0"
+base theme = lim
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+regions[navigation]     = 'Navigation'
+regions[header]         = 'Top Bar'
+regions[highlighted]    = 'Highlighted'
+regions[help]           = 'Help'
+regions[pre-content]    = 'Pre Content'
+regions[content]        = 'Content'
+regions[post-content]   = 'Post Content'
+regions[sidebar_first]  = 'Primary'
+regions[sidebar_second] = 'Secondary'
+regions[footer]         = 'Footer'
+regions[page_top]       = 'Page top'
+regions[page_bottom]    = 'Page bottom'
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Stylesheets
+;;;;;;;;;;;;;;;;;;;;;
+stylesheets[all][] = less/style.less
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Scripts
+;;;;;;;;;;;;;;;;;;;;;
+exclude[js][] = sites/all/themes/bootstrap/js/bootstrap.js
+
+scripts[] = 'vendor/materialize/js/global.js'
+scripts[] = 'vendor/materialize/js/animation.js'
+scripts[] = 'vendor/materialize/js/transitions.js'
+scripts[] = 'vendor/materialize/js/buttons.js'
+scripts[] = 'vendor/materialize/js/forms.js'
+scripts[] = 'vendor/materialize/js/transitions.js'
+scripts[] = 'vendor/materialize/js/waves.js'
+scripts[] = 'vendor/materialize/js/date_picker/picker.js'
+scripts[] = 'vendor/materialize/js/date_picker/picker.date.js'
+
+
+;scripts[] = 'bootstrap/js/affix.js'
+scripts[] = 'vendor/bootstrap/js/alert.js'
+;scripts[] = 'bootstrap/js/button.js'
+;scripts[] = 'bootstrap/js/carousel.js'
+scripts[] = 'vendor/bootstrap/js/collapse.js'
+;scripts[] = 'bootstrap/js/dropdown.js'
+scripts[] = 'vendor/bootstrap/js/modal.js'
+;scripts[] = 'bootstrap/js/tooltip.js'
+;scripts[] = 'bootstrap/js/popover.js'
+;scripts[] = 'bootstrap/js/scrollspy.js'
+scripts[] = 'vendor/bootstrap/js/tab.js'
+;scripts[] = 'bootstrap/js/transition.js'
+
+; Custom Scripts
+scripts[] = 'js/theme.js'
+
+; Disable the CDN provider so compiled source files can be used.
+settings[bootstrap_cdn] = ''
+
+settings[materialize_active] = 1
+settings[materialize_less] = 1
+
+; Variables defined here will automatically be available inside sheets
+; registered to this module.
+; Variables are lazy evaluated, so they don't have to be defined in order.
+less[vars][@sticky-footer] = 1
+less[vars][@max-width-textfield]   = 320px
+
+; Include Custom Vendors
+vendors[materialize][inc] = 'sites/all/themes/lim/includes/vendors/materialize/materialize.inc'

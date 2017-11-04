@@ -1,0 +1,70 @@
+.panel {
+  .panel-heading {
+    float: left;
+
+    .fieldset-legend:before {
+      margin-right: 15px;
+      font-family: 'Glyphicons Halflings'; /* essential for enabling glyphicon */
+      content: "\e114"; /* symbol for "opening" panels */
+      color: white;
+    }
+
+    a {
+      display: inline;
+      color: inherit;
+      font-size: 16px;
+      &.panel-title {
+        display: inline;
+      }
+    }
+  }
+}
+
+.panel.collapsed {
+  .panel-heading {
+    .fieldset-legend:before {
+      content: "\e080" !important; /* symbol for "collapsed" panels */
+    }
+  }
+}
+
+.fieldset-color (@color) {
+
+  &.panel {
+    border-color: @color;
+    &.collapsed {
+      box-shadow: none;
+      margin-bottom: 0;
+      height: auto;
+      .panel-heading {
+        .fieldset-legend:before {
+          content: "\e080"; /* symbol for "collapsed" panels */
+        }
+      }
+    }
+
+    .panel-heading {
+      background: @color;
+      float: left;
+      a {
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        &:hover, &:focus {
+          text-decoration: none;
+        }
+      }
+      .fieldset-legend::before {
+        margin-right: 15px;
+        font-family: 'Glyphicons Halflings'; /* essential for enabling glyphicon */
+        content: "\e114"; /* symbol for "opening" panels */
+        color: white;
+      }
+    }
+
+    .panel-body {
+      border-color: @color;
+    }
+
+  }
+}
